@@ -1,4 +1,3 @@
-
 # detect-transition
 
   Returns the correctly prefixed CSS3 transition, transform and transition-timing-function strings.
@@ -12,20 +11,24 @@
 ### .transition
 
   In IE10
+  
     > require('detect-transition').transition
     > "msTransition"
 
   In Chrome
+  
     > require('detect-transition').transition
     > "WebKitTransition"
 
-  In some browser that doesn't support CSS3 transitions
+  In unsupported browser
+  
     > require('detect-transition').transition
     > false
 
 ### .timingFunction
 
   In IE10
+  
     > require('detect-transition').timingFunction
     > "msTransitionTimingFunction"
   
@@ -42,6 +45,7 @@
 ### .transform
 
   In IE10
+  
     > require('detect-transition').timingFunction
     > "msTransform"
   
