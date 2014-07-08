@@ -2,7 +2,7 @@
   "name": "detect-transition",
   "repo": "charlottegore/detect-transition",
   "description": "Returns a string representing valid CSS3 transition or -1",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [],
   "dependencies": {},
   "development": {},

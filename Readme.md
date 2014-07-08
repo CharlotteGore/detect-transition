@@ -1,63 +1,73 @@
 # detect-transition
 
-  Returns the correctly prefixed CSS3 transition, transform and transition-timing-function strings.
+Feature detection and property finder for CSS3 transition, transform and transition-timing-function properties.
 
 ## Installation
 
-    $ component install charlottegore/detect-transition
+NPM/Browserify
+
+```sh
+$ npm install --save detect-transition
+```
 
 ## API
 
-### .transition
+Run the detector and get the correct properties by requiring the module.
 
-  In IE10
-  
-    > require('detect-transition').transition
-    > "msTransition"
+```js
+var transforms = require('detect-transition');
+```
 
-  In Chrome
-  
-    > require('detect-transition').transition
-    > "WebKitTransition"
+### require('detect-transition').transition
 
-  In unsupported browser
-  
-    > require('detect-transition').transition
-    > false
+Returns either the correct `transition` property for the browser or false. 
 
-### .timingFunction
+- transition
+- -webkit-transition
+- MozTransition
+- msTransition
 
-  In IE10
-  
-    > require('detect-transition').timingFunction
-    > "msTransitionTimingFunction"
-  
-  In Chrome
+```js
+  if (transforms.transition){
+    el.style[transforms.transition] = "width 2s;"
+  } else {
+    // some fallback system... no css transitions supported
+  }
+```
 
-    > require('detect-transition').timingFunction
-    > "WebkitTransitionTimingFunction"
+### require('detect-transition').transform
 
-  In unsupported..
+Returns either the correct `transform` property for the browser or false. 
 
-    > require('detect-transition').timingFunction
-    > false
+- transform
+- -webkit-transform
+- MozTransform
+- msTransform
 
-### .transform
+```js
+  if (transforms.transform){
+    el.style[transforms.transform] = "rotateY(15deg)";
+  } else {
+    // some fallback system ...
+  }
+```
 
-  In IE10
-  
-    > require('detect-transition').timingFunction
-    > "msTransform"
-  
-  In Chrome
+### require('detect-transition').timingFunctions
 
-    > require('detect-transition').timingFunction
-    > "WebkitTransform"
+Returns either the correct `timing-function` property for the browser or false. 
 
-  In unsupported..
+- transitionTimingFunction
+- -webkit-transition-timing-function
+- MozTransitionTimingFunction
+- msTransitionTimingFunction
 
-    > require('detect-transition').transform
-    > false
+```js
+  if (transforms.timingFunctions){
+    el.style[transforms.timingFunctions] = "ease-in";
+  } else {
+    // some fallback system ...
+  }
+```
 
 ## License
 

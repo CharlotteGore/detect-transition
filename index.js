@@ -1,10 +1,10 @@
 window.module = {
-    exports = {}
+    exports : {}
 }
 
-var transitions = ["transition", "WebkitTransition", "MozTransition", "msTransition", "OTransition"];
-var timingFunctions = ["TransitionTimingFunction", "WebkitTransitionTimingFunction", "MozTransitionTimingFunction", "msTransitionTimingFunction"];
-var transforms = ["transform", "WebkitTransform", "MozTransform", "msTransform", "OTransform"];
+var transitions = ["transition", "-webkit-transition", "MozTransition", "msTransition"];
+var timingFunctions = ["transitionTimingFunction", "-webkit-transition-timing-function", "MozTransitionTimingFunction", "msTransitionTimingFunction"];
+var transforms = ["transform", "-webkit-transform", "MozTransform", "msTransform"];
 var element = document.createElement("div").style;
 
 module.exports.transition = (function () {
