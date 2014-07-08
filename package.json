@@ -1,0 +1,29 @@
+{
+  "name": "detect-transition",
+  "version": "1.0.0",
+  "description": "Detects and provides the correct CSS property for transform, transition and timing functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CharlotteGore/detect-transition.git"
+  },
+  "keywords": [
+    "css",
+    "dom",
+    "transition",
+    "transform",
+    "timing",
+    "functions",
+    "shim",
+    "detect",
+    "feature"
+  ],
+  "author": "Charlotte Gore <charlotte@greenmesa.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CharlotteGore/detect-transition/issues"
+  }
+}

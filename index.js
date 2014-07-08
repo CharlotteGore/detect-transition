@@ -1,3 +1,7 @@
+window.module = {
+    exports = {}
+}
+
 var transitions = ["transition", "WebkitTransition", "MozTransition", "msTransition", "OTransition"];
 var timingFunctions = ["TransitionTimingFunction", "WebkitTransitionTimingFunction", "MozTransitionTimingFunction", "msTransitionTimingFunction"];
 var transforms = ["transform", "WebkitTransform", "MozTransform", "msTransform", "OTransform"];
